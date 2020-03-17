@@ -17,7 +17,7 @@ def poland_cases_by_date(day: int, month: int, year: int = 2020) -> int:
     Returns confirmed infection cases for country 'Poland' given a date.
 
     Ex.
-    >>> poland_cases_by_date(7, 3, 2020)
+    >>> poland_cases_byy_date(7, 3, 2020)
     5
     >>> poland_cases_by_date(11, 3)
     31
