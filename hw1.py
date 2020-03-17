@@ -22,7 +22,7 @@ def poland_cases_by_date(day: int, month: int, year: int = 2020) -> int:
     >>> poland_cases_by_date(11, 3)
     31
 
-    :param year: 4 digit integer representation of the year to get the cases for, defaults to 2020
+    :param year: 4 digity integer representation of the year to get the cases for, defaults to 2020
     :param day: Day of month to get the cases for as an integer indexed from 1
     :param month: Month to get the cases for as an integer indexed from 1
     :return: Number of cases on a given date as an integer
