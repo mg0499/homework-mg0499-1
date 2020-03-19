@@ -40,8 +40,15 @@ def countries_with_no_deaths_count(date: datetime.date) -> int:
     :return: Number of countries with no deaths but with active cases on a given date as an integer
     """
     
-    # Your code goes here
-    pass
+   # Your code goes here
+    counter=0;
+    df1 = dfC[dfC[format_date(date)]>0].index 
+    for i in df1:
+        if(dfD[format_date(date)][i]==0):
+            counter=counter+1;
+    #df3 = df1.join(df2.set_index("Country/Region"), on="Country/Region", rsuffix='_deahts')
+    #df3 = df3.loc[(df3[format_date(date)]>0) & (df3[format_date(date) + '_deahts']==0)]
+    return counter
 
 
 def more_cured_than_deaths_indices(date: datetime.date) -> List[int]:
@@ -65,5 +72,9 @@ def more_cured_than_deaths_indices(date: datetime.date) -> List[int]:
     :return: A List of integers containing indices of countries which had more cured cases than deaths on a given date
     """
     
-    # Your code goes here
-    pass
+      # Your code goes here
+    list=[];
+    for i in dfR.index:
+        if(dfR[format_date(date)][i] > dfD[format_date(date)][i]):           
+            list.append(i)
+    return list
